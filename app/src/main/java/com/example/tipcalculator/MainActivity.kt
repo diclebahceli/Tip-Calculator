@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun calculateTip() {
 
-        val costOfServiceText = binding.EditTextt.text.toString()
+        val costOfServiceText = binding.costOfServicesEditText.text.toString()
         if(costOfServiceText==""){
             return
         }

@@ -8,6 +8,25 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        android:layout_width="291dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="28dp"
+        android:hint="Cost of service"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/costOfServicesEditText"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/questionText"
         android:layout_width="wrap_content"
@@ -24,17 +43,7 @@
 
     </TextView>
 
-    <EditText
-        android:id="@+id/EditTextt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Cost of service"
-        android:inputType="numberDecimal"
-        android:minHeight="48dp"
-        android:textAlignment="textStart"
-        app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toTopOf="parent"></EditText>
 
 
     <RadioGroup
@@ -107,7 +116,7 @@
 
     </Button>
 
-    <Switch
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/checkswitch"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -120,8 +129,45 @@
         app:layout_constraintHorizontal_bias="0.737"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.619">
+        app:layout_constraintVertical_bias="0.619" />
 
-    </Switch>
+    <ImageView
+        android:id="@+id/icon_cost_of_service"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textField"
+        app:layout_constraintEnd_toStartOf="@+id/textField"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textField"
+        app:layout_constraintVertical_bias="0.384"
+        app:srcCompat="@drawable/ic_store" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/questionText"
+        app:layout_constraintEnd_toStartOf="@+id/questionText"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/questionText"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_room_service" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="19dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkswitch"
+        app:layout_constraintEnd_toStartOf="@+id/checkswitch"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkswitch"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_round_up" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
