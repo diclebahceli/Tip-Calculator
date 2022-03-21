@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         val percentace = when(idOfOption){
             binding.button1.id-> 0.2
-            binding.button1.id-> 0.1
+            binding.button2.id-> 0.1
             else -> 0.05
 
 
